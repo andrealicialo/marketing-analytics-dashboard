@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marketing Insights | Analytics Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js" defer></script>
+  <script src="{{ url_for('static',filename='js/dashboard.js') }}" defer></script>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar"><div class="brand"><span class="brand-icon">DT</span> Data<span class="brand-tail">Test</span></div><div class="menu-caption">MARKETING INSIGHTS</div><div class="menu-group">Cross Channel</div><div class="menu-active">Executive Summary</div><div class="menu-item">Channel Performance</div><div class="menu-item">Channel Segments & Trends</div><div class="menu-group other">Paid Ads × Google Analytics</div><div class="menu-item">Paid Search</div><div class="menu-item">Paid Social</div><div class="menu-item">Search Engine Opt.</div><div class="menu-item">Organic Social</div><div class="menu-item">Programmatic</div><div class="menu-item">eCommerce</div><div class="side-footer">Marketing Insights<br><small>Portfolio recreation · Synthetic data</small></div></aside>
+  <main class="main">
+    <header class="topbar"><div class="filter"><label for="source">Data Source</label><select id="source"><option value="All">All sources</option></select></div><div class="filter"><label for="channel">Channel</label><select id="channel"><option value="All">All channels</option></select></div><div class="filter"><label for="campaign">Campaign</label><select id="campaign"><option value="All">All campaigns</option></select></div><div class="filter dates"><label>Date range</label><input id="start" type="date" value="2023-01-01"><span>—</span><input id="end" type="date" value="2023-12-31"></div></header>
+    <div id="status" role="status"></div>
+    <div class="dashboard">
+      <section class="left-column"><div id="kpi-grid" class="kpi-grid"></div><section class="panel trend-panel"><div class="panel-heading"><h2>Channel Trends</h2><span class="panel-subtitle">Impressions over the selected period</span></div><div class="chart-wrap"><canvas id="trend-chart"></canvas></div></section></section>
+      <section class="right-column"><section class="panel table-panel"><h2><span class="heading-icon">✺</span>Channel Performance</h2><div id="channel-table" class="table-scroll"></div></section><section class="panel table-panel"><h2><span class="heading-icon">◉</span>Data Source Performance</h2><div id="source-table" class="table-scroll"></div></section><section class="panel table-panel"><h2><span class="heading-icon">▤</span>Campaign Performance</h2><div id="campaign-table" class="table-scroll"></div></section></section>
+    </div>
+    <footer>All figures are simulated for demonstration; they do not represent real advertisers. YoY comparison uses the equivalent calendar dates in the previous year.</footer>
+  </main>
+</div>
+</body>
+</html>
