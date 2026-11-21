@@ -24,6 +24,9 @@ Visit http://127.0.0.1:5000
 - Deterministic synthetic data, clearly identified as such
 - Responsive UI
 
+<img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/a07458b3-72b8-4e8d-8b85-9cd42eeb8532" />
+
+
 ## KPI definitions
 
 - **CTR** = clicks / impressions × 100
@@ -32,10 +35,6 @@ Visit http://127.0.0.1:5000
 - **Conversion Rate** = conversions / clicks × 100
 - **YoY %** = (current / previous-calendar-year − 1) × 100; undefined previous baselines appear as em dash
 - Organic traffic has spend = 0; estimated revenue is synthetic for illustration.
-
-## Important interpretation
-
-The source reference screenshot contains several metrics that cannot all be reproduced consistently from a standard marketing fact table; this project prioritizes internally consistent metric calculations rather than copying those numbers exactly. In particular, CTR is computed from clicks and impressions rather than assigned directly as a dashboard output.
 
 ## Deployment with Render
 
@@ -48,7 +47,3 @@ The source reference screenshot contains several metrics that cannot all be repr
 ## Technical notes
 
 For larger datasets, replace the CSV with a database and persist pre-aggregated data. The current generator creates ~26k rows (36 daily campaign/source combinations × 730 days). Flask loads CSV once on startup. For production, add caching, pagination, monitoring, tests and security hardening.
-
-## Assessment attribution
-
-Independently created interpretation of the screenshot from [Marketing Analytics Assignments / TCS Assignment](https://github.com/ej29-r3d/Marketing-Analytics-Assignments/tree/main/tcs-assignment). No affiliation with Improvado. All data are simulated.
