@@ -36,9 +36,15 @@ Visit http://127.0.0.1:5000
 - **YoY %** = (current / previous-calendar-year − 1) × 100; undefined previous baselines appear as em dash
 - Organic traffic has spend = 0; estimated revenue is synthetic for illustration.
 
+https://youtu.be/xvqYb7t8Ju4 
+
 ## Deployment with Render
 
-1. Push this folder's contents to a public GitHub repository.
+https://marketing-analytics-dashboard-rsei.onrender.com/
+
+In case you want to customize and implement this dashboard, follow the steps:
+
+1. Push this folder's contents to a public GitHub repository in your account.
 2. In Render create a **Web Service** and connect your repo.
 3. Runtime: **Python**. Build command: `pip install -r requirements.txt && python generate_data.py`.
 4. Start command: `gunicorn app:app --bind 0.0.0.0:$PORT`.
